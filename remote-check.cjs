@@ -1,0 +1,1 @@
+const fs=require('node:fs'); const assert=require('node:assert/strict'); assert.equal(fs.readFileSync('feature.txt','utf8'),'fixed','Synthetic CI requires feature.txt to contain fixed'); console.log('Synthetic remote CI passed');

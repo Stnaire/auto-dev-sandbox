@@ -1,0 +1,21 @@
+name: Sandbox CI
+on:
+  push:
+    branches-ignore: [main]
+permissions:
+  contents: read
+jobs:
+  synthetic-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Fetch exact pushed commit
+        env:
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin https://github.com/Stnaire/auto-dev-sandbox.git
+          git fetch --depth=1 origin "$HEAD_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Verify synthetic feature
+        run: node remote-check.cjs
