@@ -1,0 +1,44 @@
+{
+  "status": "ready",
+  "projectGoal": "Utility",
+  "assumptions": [],
+  "phases": [
+    {
+      "id": "PHASE-01",
+      "title": "Feature 1",
+      "goal": "Implement feature 1",
+      "scope": [
+        "Feature 1"
+      ],
+      "outOfScope": [
+        "Other features"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "AC-01"
+      ],
+      "riskTags": [],
+      "verificationHints": []
+    },
+    {
+      "id": "PHASE-02",
+      "title": "Feature 2",
+      "goal": "Implement feature 2",
+      "scope": [
+        "Feature 2"
+      ],
+      "outOfScope": [
+        "Other features"
+      ],
+      "dependencies": [
+        "PHASE-01"
+      ],
+      "acceptanceCriteria": [
+        "AC-02"
+      ],
+      "riskTags": [],
+      "verificationHints": []
+    }
+  ],
+  "blockingReason": null
+}

@@ -1,0 +1,1 @@
+const fs = require('node:fs'); const assert = require('node:assert/strict'); if(fs.existsSync('feature.txt')) assert.ok(['implemented','fixed'].includes(fs.readFileSync('feature.txt','utf8'))); console.log('Synthetic local checks passed');
