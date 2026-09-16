@@ -1,0 +1,53 @@
+{
+  "status": "ready",
+  "projectGoal": "Livrer le petit utilitaire normalize-spaces conforme au CDC",
+  "assumptions": [],
+  "phases": [
+    {
+      "id": "PHASE-01",
+      "title": "Normalisation des espaces",
+      "goal": "Normalisation des espaces",
+      "scope": [
+        "API normalize et tests unitaires dans p05"
+      ],
+      "outOfScope": [
+        "Dépendances externes",
+        "Modification des anciens fichiers de test",
+        "Modification CDC/roadmap"
+      ],
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "AC-P501"
+      ],
+      "riskTags": [],
+      "verificationHints": [
+        "node --test"
+      ]
+    },
+    {
+      "id": "PHASE-02",
+      "title": "CLI et documentation",
+      "goal": "CLI et documentation",
+      "scope": [
+        "CLI, tests de processus et notice dans p05"
+      ],
+      "outOfScope": [
+        "Dépendances externes",
+        "Modification des anciens fichiers de test",
+        "Modification CDC/roadmap"
+      ],
+      "dependencies": [
+        "PHASE-01"
+      ],
+      "acceptanceCriteria": [
+        "AC-P502",
+        "AC-P503"
+      ],
+      "riskTags": [],
+      "verificationHints": [
+        "node --test"
+      ]
+    }
+  ],
+  "blockingReason": null
+}
