@@ -19,3 +19,5 @@ jobs:
           git checkout --detach FETCH_HEAD
       - name: Verify synthetic feature
         run: node remote-check.cjs
+      - name: Verify P05 utility tests
+        run: node --test
